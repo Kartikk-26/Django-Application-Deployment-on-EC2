@@ -132,8 +132,8 @@ Description=Gunicorn daemon for Django app
 After=network.target
 
 [Service]
-User=www-data
-Group=www-data
+User=root
+Group=root
 WorkingDirectory=/dj/social_media
 ExecStart=/dj/social_media/venv/bin/gunicorn --workers 3 --bind unix:/dj/social_media/social.sock social.wsgi:application
 
